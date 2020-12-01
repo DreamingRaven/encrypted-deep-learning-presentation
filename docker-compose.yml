@@ -1,0 +1,23 @@
+# @Author: archer
+# @Date:   2019-09-13T12:52:06+01:00
+# @Last modified by:   archer
+# @Last modified time: 2020-11-10T15:55:47+00:00
+
+version: "3.6" # docker on raspberry pi 4 compatibl version = <=3.6
+
+services:
+
+  docker_presentation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: docker_presentation_image
+    container_name: docker_presentation_container
+    volumes:
+      - ./built:/build:rw
+      # .:/latex-presentation
+    command:
+      - "cp"
+      - "/latex-presentation/main.pdf"
+      - "/build/."
+      # - "/latex-presentation/build"

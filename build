@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# @Author: GeorgeRaven <archer>
+# @Date:   2020-11-09T09:50:05+00:00
+# @Last modified by:   archer
+# @Last modified time: 2020-11-12T14:50:55+00:00
+# @License: please see LICENSE file in project root
+
+# shell escape flag needed for minted src code importing
+latexmk -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -pdf *.tex
+latexmk -c
