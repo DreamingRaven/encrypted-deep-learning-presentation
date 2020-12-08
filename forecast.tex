@@ -91,67 +91,72 @@
   % \end{frame}
 
   \begin{frame}
-    \frametitle{My Work}
+    \frametitle{Augmented Agronomist}
     \begin{columns}
       \begin{column}{0.5\textwidth}
-        I work with:
+        The Augmented Agronomist is:
         \begin{itemize}
-          \item Deep Learning (subfield of Artificial Intelligence, and probably the coolest part of AI)
-          \item Fully Homomorphic Encryption
+          \item Privacy-Preserving Deep Learning
+          \item (Un)Certainty Metrics
+          \item Robotic Attention
         \end{itemize}
         Applied to:
         \begin{itemize}
           \item Agriculture; Predicting plant yield, in particular strawberries.
-          \item Demand side response to national grid.
+          \item How certain we are of our predictions.
+          \item Given uncertain or problematic scenarios get robot to re-investigate.
         \end{itemize}
       \end{column}
       \begin{column}{0.5\textwidth}
         \begin{figure}[th!]
           \centering
-          \includegraphics[angle=-90,origin=c,width=0.55\textwidth]{wasp.jpg}
-          \caption{Strawberry tabletop with a wasp having some lunch.}
-          \label{fig:wasp}
+          \includegraphics[origin=c,width=1\textwidth]{yield.png}
+          \caption{Yield over time in our riseholme campus (2020).}
+          \label{fig:yield}
         \end{figure}
       \end{column}
-
     \end{columns}
   \end{frame}
 
   \begin{frame}
-    \frametitle{Summary}
+    \frametitle{Augmented Agronomist Predictions}
     \begin{columns}
       \begin{column}{0.5\textwidth}
-        \begin{itemize}
-          \item Introduce myself
-          \item Introduce the problem of secrets
-          \item What is deep learning
-          \item What is fully homomorphic encryption
-          \item How I got here
-          \item How to find out more if it interests you
-        \end{itemize}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[origin=c,width=1\textwidth]{humidiy_over_time.png}
+          \caption{Humidity over time in our riseholme campus (2020).}
+          \label{fig:humidity}
+        \end{figure}
       \end{column}
       \begin{column}{0.5\textwidth}
         \begin{figure}[th!]
           \centering
-          \includegraphics[angle=-90,origin=c,width=0.6\textwidth]{strawberry.jpg}
-          \caption{A strawberry for your time.}
-          \label{fig:strawberry}
+          \includegraphics[origin=c,width=1\textwidth]{temp_over_time.png}
+          \caption{Temperature over time in our riseholme campus (2020).}
+          \label{fig:temp}
         \end{figure}
       \end{column}
     \end{columns}
   \end{frame}
 
-  \begin{frame}[allowframebreaks]
-    \frametitle{References}
-    % % biblatex version
-    \printbibliography
+  \begin{frame}
+    Last years data collection, two weeks ahead:
+    \begin{table}[]
+      \begin{tabular}{l|l}
+      Neural Network Type                   & Mean Absolute Error (MAE) Test Set \\ \hline
+      Recurrent Neural Network (RNN)        & 0.208                              \\
+      Long Short-Term Memory Network (LSTM) & 0.293                              \\
+      Gated Recurrent Unit (GRU)            & 0.142
+      \end{tabular}
+    \end{table}
   \end{frame}
 
-  \begin{frame}
-      \frametitle{Questions}
-      Come and ask questions!
-      \url{https://github.com/DreamingRaven/2020-new-scientist-live}
-  \end{frame}
+  % \begin{frame}[allowframebreaks]
+  %   \frametitle{References}
+  %   % % biblatex version
+  %   \printbibliography
+  % \end{frame}
 
 
 \end{document}
