@@ -1,0 +1,157 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz} % for QR code overlay
+
+% code snippets
+\usepackage{minted}
+\newmintedfile[dockercode]{dockerfile}{
+  % bgcolor=mintedbackground,
+  fontfamily=tt,
+  linenos=true,
+  numberblanklines=true,
+  numbersep=5pt,
+  gobble=0,
+  frame=leftline,
+  framerule=0.4pt,
+  framesep=2mm,
+  funcnamehighlighting=true,
+  tabsize=4,
+  obeytabs=false,
+  mathescape=false
+  samepage=false, %with this setting you can force the list to appear on the same page
+  showspaces=false,
+  showtabs =false,
+  texcl=false,
+}
+\newminted[bashcode]{bash}{
+  % bgcolor=mintedbackground,
+  fontfamily=tt,
+  linenos=true,
+  numberblanklines=true,
+  numbersep=5pt,
+  gobble=0,
+  frame=leftline,
+  framerule=0.4pt,
+  framesep=2mm,
+  funcnamehighlighting=true,
+  tabsize=4,
+  obeytabs=false,
+  mathescape=false
+  samepage=false, %with this setting you can force the list to appear on the same page
+  showspaces=false,
+  showtabs =false,
+  texcl=false,
+}
+
+% biblatex (requires biber; sudo pacman -S biber)
+\usepackage[]{biblatex} % biblatex
+\addbibresource{"./content/bib/bib1.bib"}
+\addbibresource{"./content/bib/bib2.bib"}
+\addbibresource{"./content/bib/throwaway.bib"}
+
+\usepackage{graphicx}
+\graphicspath{ {./content/img/} }
+
+\usetheme{Boadilla}
+\usecolortheme{rose}
+% \beamerdefaultoverlayspecification{<+->} % this will turn it into slides
+
+\title{Augmented Agronomist}
+\subtitle{LAR Mini-Conference \today}
+\author{George Onoufriou, Marc Hanheide, Georgios Leontidis}
+\date{\today}
+
+\begin{document}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=1.5cm]{qrcode.png}};
+\end{tikzpicture}}
+
+  \frame{\titlepage}
+
+  % \begin{frame}
+  %   \frametitle{About}
+  %   \begin{columns}
+  %     \begin{column}{0.5\textwidth}
+  %       \begin{itemize}
+  %         \item PhD Candidate Computer/ Data Science
+  %         \item Privacy and Linux Enthusiast
+  %       \end{itemize}
+  %     \end{column}
+  %     \begin{column}{0.5\textwidth}
+  %       \begin{figure}[th!]
+  %         \centering
+  %         \includegraphics[width=0.8\textwidth]{gh.png}
+  %         \caption{GitHub profile page where you can come to see my work and chat. \autocite{repository}}
+  %         \label{fig:gh}
+  %       \end{figure}
+  %     \end{column}
+  %   \end{columns}
+  % \end{frame}
+
+  \begin{frame}
+    \frametitle{My Work}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        I work with:
+        \begin{itemize}
+          \item Deep Learning (subfield of Artificial Intelligence, and probably the coolest part of AI)
+          \item Fully Homomorphic Encryption
+        \end{itemize}
+        Applied to:
+        \begin{itemize}
+          \item Agriculture; Predicting plant yield, in particular strawberries.
+          \item Demand side response to national grid.
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[angle=-90,origin=c,width=0.55\textwidth]{wasp.jpg}
+          \caption{Strawberry tabletop with a wasp having some lunch.}
+          \label{fig:wasp}
+        \end{figure}
+      \end{column}
+
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Summary}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Introduce myself
+          \item Introduce the problem of secrets
+          \item What is deep learning
+          \item What is fully homomorphic encryption
+          \item How I got here
+          \item How to find out more if it interests you
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[angle=-90,origin=c,width=0.6\textwidth]{strawberry.jpg}
+          \caption{A strawberry for your time.}
+          \label{fig:strawberry}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}[allowframebreaks]
+    \frametitle{References}
+    % % biblatex version
+    \printbibliography
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Questions}
+      Come and ask questions!
+      \url{https://github.com/DreamingRaven/2020-new-scientist-live}
+  \end{frame}
+
+
+\end{document}
