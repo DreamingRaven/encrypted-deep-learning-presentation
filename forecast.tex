@@ -63,10 +63,10 @@
 
 \begin{document}
 
-\addtobeamertemplate{frametitle}{}{%
-\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=1.5cm]{qrcode.png}};
-\end{tikzpicture}}
+% \addtobeamertemplate{frametitle}{}{%
+% \begin{tikzpicture}[remember picture,overlay]
+% \node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=1.5cm]{qrcode.png}};
+% \end{tikzpicture}}
 
   \frame{\titlepage}
 
@@ -150,6 +150,13 @@
       Gated Recurrent Unit (GRU)            & 0.142
       \end{tabular}
     \end{table}
+    This year working on:
+    \begin{itemize}
+        \item 3 weeks ahead using our increased data
+        \item Using more data; Image, irrigation, spacial position data
+        \item More granular; Per-row predictions
+        \item Doing this all secretly I.E with privacy-preservation
+    \end{itemize}
   \end{frame}
 
   % \begin{frame}[allowframebreaks]
