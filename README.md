@@ -1,5 +1,8 @@
 # Privacy-Preserving Encrypted Deep Learning Presentation
-Presentation outlining encrypted deep learning and how it can help us preserve our privacy as we go forward, and protect our data from quantum computers.
+Fully Homomorphic Encryption (FHE) is the holy grail of encryption.
+Data it encrypts is manipulatable/ computable while it is still encrypted as a cyphertex.
+This quantum resistant encryption creates a way for third parties to interact with highly sensitive data without any possibility of data leaks, since they never require the ability to decrypt the cyphertext, but can still use it to spit out encrypted answers to some of the most difficult and pressing problems; Diagnosis, forecasting, automation etc.
+This presentation will introduce FHE applied to deep learning, show you in brief how it works, and point you in the right direction if you should want to learn more.
 
 ## Questions
 To ask a question please create a new issue using this link:
