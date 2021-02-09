@@ -108,7 +108,7 @@
         \begin{figure}[th!]
           \centering
           \includegraphics[angle=-90,origin=c,width=0.55\textwidth]{wasp.jpg}
-          \caption{Strawberry tabletop with a wasp having some lunch.}
+          \caption{Strawberry tabletop with a wasp having some lunch. \autocite{repository}}
           \label{fig:wasp}
         \end{figure}
       \end{column}
@@ -317,12 +317,17 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{How to Fully Homomorphic Encrypt}
+    \frametitle{Overview of FHE/ CKKS}
     \begin{columns}
       \begin{column}{0.5\textwidth}
         Overview of Cheon, Kim, Kim and Song (CKKS) \autocite{cheon2017homomorphic, cheon2018bootstrapping} FHE scheme:
         \begin{itemize}
-          \item Creates and encrypts a
+          \item Operates on vectors of complex values $\mathbb{C}$, thus useful for floating point operations such as those in deep learning, unlike many other schemes
+          \item Encodes complex values as polynomials known as the plaintext
+          \item Encrypts plaintext using public key
+          \item Cyphertext that addition, multiplication, and rotation can be applied to
+          \item Decrypt using private key into plaintext polynomials
+          \item Decode plaintext to complex values
         \end{itemize}
       \end{column}
       \begin{column}{0.5\textwidth}
@@ -337,13 +342,13 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{FHE + Deep Learning}
+    \frametitle{Deep Learning on CKKS Cyphertext}
     \begin{columns}
       \begin{column}{1\textwidth}
         \begin{figure}[th!]
           \centering
           \includegraphics[width=1\textwidth]{encrypted_cnn.png}
-          \caption{Encrypted convolutional neural network example}
+          \caption{Encrypted convolutional neural network example \autocite{repository}}
           \label{fig:cnn}
         \end{figure}
       \end{column}
@@ -354,24 +359,25 @@
     \frametitle{Interested?}
     \begin{columns}
       \begin{column}{0.5\textwidth}
-        I got here through:
+        I got here through textbook approach:
         \begin{itemize}
-          \item A-Level, BSc Computer Science, PhD Computer Science
-          \item Exploring the things that interested me
-          \item Getting to know the people
+          \item A-Levels (Sciences)
+          \item BSc Computer Science
+          \item PhD Computer Science
         \end{itemize}
-        Computer Science takes you places, as it is so broad.
-      \end{column}
-      \begin{column}{0.5\textwidth}
+        Computer Science takes you places, as it is so broad.\\
         Everyone is different you might go a different route:
         \begin{itemize}
           \item Computer science can be learned easily by anyone with a reasonable computer and internet connection for free
         \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
         Good places to start are:
         \begin{itemize}
             \item Deep Learning by Goodfellow et al \autocite{Goodfellow-et-al-2016}
             \item Coursera deep learning specialisation
-            \item Andrej Karpathy's youtube series on deep learning
+            \item Andrej Karpathy's youtube series on deep learning \autocite{andrejkarpathy}
+            \item CKKS explained (OpenMined) \autocite{openmined}
         \end{itemize}
       \end{column}
     \end{columns}
@@ -386,6 +392,7 @@
           \item Introduce the problem of secrets
           \item What is deep learning
           \item What is fully homomorphic encryption
+          \item A rough idea of how it operates
           \item How I got here
           \item How to find out more if it interests you
         \end{itemize}
