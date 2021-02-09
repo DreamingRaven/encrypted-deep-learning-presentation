@@ -57,8 +57,8 @@
 % \beamerdefaultoverlayspecification{<+->} % this will turn it into slides
 
 \title{Privacy-Preserving Encrypted Deep Learning}
-\subtitle{Artificial Intelligence}
-\author{George Onoufriou\\(University of Lincoln)}
+\subtitle{Fully Homomorphic Encryption}
+\author{George Onoufriou\\University of Lincoln}
 \date{\today}
 
 \begin{document}
@@ -179,7 +179,7 @@
         \begin{figure}[th!]
           \centering
           \includegraphics[width=1\textwidth]{deep-blue.jpg}
-          \caption{Deep Blue beating world champion Garry Kasparov on their first game (1996)}
+          \caption{Deep Blue rematch against world champion Garry Kasparov after beating him in 1996 (by Adam Nadel/AP Images)}
           \label{fig:jim_carrey}
         \end{figure}
       \end{column}
@@ -317,6 +317,26 @@
   \end{frame}
 
   \begin{frame}
+    \frametitle{How to Fully Homomorphic Encrypt}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        Overview of Cheon, Kim, Kim and Song (CKKS) \autocite{cheon2017homomorphic, cheon2018bootstrapping} FHE scheme:
+        \begin{itemize}
+          \item Creates and encrypts a
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=1\textwidth]{fhe-overview.pdf}
+          \caption{FHE / CKKS operation overview \autocite{openmined}}
+          \label{fig:jim_carrey}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
     \frametitle{FHE + Deep Learning}
     \begin{columns}
       \begin{column}{1\textwidth}
@@ -374,7 +394,7 @@
         \begin{figure}[th!]
           \centering
           \includegraphics[angle=-90,origin=c,width=0.6\textwidth]{strawberry.jpg}
-          \caption{A strawberry for your time.}
+          \caption{A strawberry for your time. \autocite{repository}}
           \label{fig:strawberry}
         \end{figure}
       \end{column}
