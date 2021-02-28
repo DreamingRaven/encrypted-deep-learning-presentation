@@ -295,6 +295,28 @@
   \end{frame}
 
   \begin{frame}
+    \frametitle{Solutions}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Don't
+          \item Federated learning (collaborative distributed models)
+          \item Differential privacy (anonymise individuals)
+          \item Fully Homomorphic Encryption (compute on encrypted data)
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=1\textwidth]{surveillance.jpg}
+          \caption{Surveillance by Hustvedt \autocite{cc}}
+          \label{fig:jim_carrey}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
     \frametitle{Fully Homomorphic Encryption and What Makes it Interesting}
     \begin{columns}
       \begin{column}{0.5\textwidth}
@@ -342,12 +364,26 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{Deep Learning on CKKS Cyphertext}
+    \frametitle{Deep Learning on CKKS Cyphertext Example (Point Wise)}
     \begin{columns}
       \begin{column}{1\textwidth}
         \begin{figure}[th!]
           \centering
           \includegraphics[width=0.9\textwidth]{encrypted_cnn.png}
+          \caption{Encrypted convolutional neural network example \autocite{repository}}
+          \label{fig:cnn}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Deep Learning on CKKS Cyphertext Example (Example Wise)}
+    \begin{columns}
+      \begin{column}{1\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=1\textwidth]{example_wise_computational_graph.pdf}
           \caption{Encrypted convolutional neural network example \autocite{repository}}
           \label{fig:cnn}
         \end{figure}
@@ -384,6 +420,41 @@
   \end{frame}
 
   \begin{frame}
+    \frametitle{Activation functions $f$}
+    \begin{columns}
+      \begin{column}{1\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=1\textwidth]{activations.png}
+          \caption{Articial neural network activation functions; Sigmoid approximation, sigmoid, ReLU, leaky-ReLU. \autocite{repository}}
+          \label{fig:approximation}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{How do we do it specifically}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        To put everything together:
+        \begin{itemize}
+          \item Aware of computational depth
+          \item Whatever we encrypt becomes final
+          \item Have to use abelian/ compatible operations only (+, *, +(-x))
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=1\textwidth]{neuron_computational_graph.pdf}
+          \caption{DL Neuron \autocite{openmined}}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
     \frametitle{CNN as Computational Graph}
     \begin{columns}
       \begin{column}{1\textwidth}
@@ -398,14 +469,64 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{Sum as Computational Graph}
+    \frametitle{Hadmard Product}
     \begin{columns}
       \begin{column}{1\textwidth}
         \begin{figure}[th!]
           \centering
-          \includegraphics[width=0.25\textwidth]{sum_computational_graph.pdf}
-          \caption{Sum as computational graph. \autocite{repository}}
-          \label{fig:sum_computational_graph}
+          \includegraphics[width=0.25\textwidth]{hadmard_product.pdf}
+          \caption{Hadmard Product of two matrices. \autocite{repository}}
+          \label{fig:hadmard_product}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{ANN as Computational Graph}
+    \begin{columns}
+      \begin{column}{1\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=1\textwidth]{dense_computational_graph.pdf}
+          \caption{Dense/ ANN neural network as computational graph. \autocite{repository}}
+          \label{fig:dense_computational_graph}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Loss as Computational Graph}
+    \begin{columns}
+      \begin{column}{1\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=0.7\textwidth]{loss_computational_graph.pdf}
+          \caption{Calculating loss/ error of our predictions, our wrongness. \autocite{repository}}
+          \label{fig:loss_computational_graph}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Alternative Use Computational Graph}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=0.7\textwidth]{alternative_computational_graph.pdf}
+          \caption{CNN alternatives for multiple deeper layers, for other use cases. \autocite{repository}}
+          \label{fig:alternative_computational_graph}
+        \end{figure}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=0.7\textwidth]{alternative_computational_graph_2.pdf}
+          \caption{CNN alternatives for multiple deeper layers, for other use cases. \autocite{repository}}
+          \label{fig:alternative_computational_graph_2}
         \end{figure}
       \end{column}
     \end{columns}
