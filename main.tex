@@ -74,9 +74,16 @@
     \frametitle{About}
     \begin{columns}
       \begin{column}{0.5\textwidth}
+        Myself:
         \begin{itemize}
           \item PhD Candidate Computer/ Data Science
           \item Privacy and Linux Enthusiast
+        \end{itemize}
+        Presentation:
+        \begin{itemize}
+          \item Slides are available via the QR code or link (QR available on every slide)
+          \item Submit an issue in repository if seeing this later but still have questions
+          \item Start very high-level, then go to visualizations of FHE
         \end{itemize}
       \end{column}
       \begin{column}{0.5\textwidth}
@@ -102,6 +109,10 @@
         Applied to:
         \begin{itemize}
           \item Agriculture; Predicting plant yield, in particular strawberries.
+        \end{itemize}
+        Further:
+        \begin{itemize}
+          \item Turning FHE into an open-source encrypted deep learning as a service (EDLaaS) to provide as a business.
         \end{itemize}
       \end{column}
       \begin{column}{0.5\textwidth}
@@ -454,6 +465,7 @@
           \item Aware of computational depth
           \item Whatever we encrypt becomes final
           \item Have to use abelian/ compatible operations only (+, *, +(-x))
+          \item Types of neural networks that work best
         \end{itemize}
       \end{column}
       \begin{column}{0.5\textwidth}
@@ -511,10 +523,18 @@
   \begin{frame}
     \frametitle{Hadmard Product}
     \begin{columns}
-      \begin{column}{1\textwidth}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item Notice: we are only using hadmard products
+          \item Again cyphertext must maintain its form
+          \item Cant pick individual items out as encrypted together
+          \item We can however mask what we are interested in and use that
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
         \begin{figure}[th!]
           \centering
-          \includegraphics[width=0.25\textwidth]{hadmard_product.pdf}
+          \includegraphics[width=0.5\textwidth]{hadmard_product.pdf}
           \caption{Hadmard Product of two matrices. \autocite{repository}}
           \label{fig:hadmard_product}
         \end{figure}
