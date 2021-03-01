@@ -364,29 +364,41 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{Deep Learning on CKKS Cyphertext Example (Point Wise)}
+    \frametitle{Overview of FHE/ CKKS Parameters}
     \begin{columns}
       \begin{column}{1\textwidth}
-        \begin{figure}[th!]
-          \centering
-          \includegraphics[width=0.9\textwidth]{encrypted_cnn.png}
-          \caption{Encrypted convolutional neural network example \autocite{repository}}
-          \label{fig:cnn}
-        \end{figure}
+        \begin{table}
+        \centering
+        \begin{tabular}{l|l|l}
+          polynomial modulus degree & max coefficient-modulus bit-length  & polynomial slot count  \\
+          \hline
+          1024                      & 27                                  & 512                    \\
+          2048                      & 54                                  & 1024                   \\
+          4096                      & 109                                 & 2048                   \\
+          8192                      & 218                                 & 4096                   \\
+          16384                     & 438                                 & 8192                   \\
+          32768                     & 881                                 & 16384
+        \end{tabular}
+        \caption{\label{tab:poly_mod_deg} Change of polynomial modulus degree effect on coefficient modulus bit-length and polynomial slot count, thus computational depth before bootstrapping and cyphertext size.}
+        \end{table}
+        \begin{itemize}
+          \item scale = 40
+          \item coefficient-modulus = [60, 40, 40, 60] = 4 rescales/ modulus switching
+        \end{itemize}
+        Don't worry too much about the specifics, libraries handle it. MS-EVA (3 months), ours.
       \end{column}
     \end{columns}
   \end{frame}
 
   \begin{frame}
-    \frametitle{Deep Learning on CKKS Cyphertext Example (Example Wise)}
+    \frametitle{Visual Example / Walkthrough of Encrypted Deep Learning}
     \begin{columns}
       \begin{column}{1\textwidth}
-        \begin{figure}[th!]
-          \centering
-          \includegraphics[width=1\textwidth]{example_wise_computational_graph.pdf}
-          \caption{Encrypted convolutional neural network example \autocite{repository}}
-          \label{fig:cnn}
-        \end{figure}
+        \begin{itemize}
+            \item will show you visual intuition of FHE + DL
+            \item cover a few of the quirks and interesting scenarios
+            \item how this can be used for different applications
+        \end{itemize}
       \end{column}
     \end{columns}
   \end{frame}
@@ -449,6 +461,34 @@
           \centering
           \includegraphics[width=1\textwidth]{neuron_computational_graph.pdf}
           \caption{DL Neuron \autocite{openmined}}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Deep Learning on CKKS Cyphertext Example (Point Wise)}
+    \begin{columns}
+      \begin{column}{1\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=0.9\textwidth]{encrypted_cnn.png}
+          \caption{Encrypted convolutional neural network example \autocite{repository}}
+          \label{fig:cnn}
+        \end{figure}
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Deep Learning on CKKS Cyphertext Example (Example Wise)}
+    \begin{columns}
+      \begin{column}{1\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=1\textwidth]{example_wise_computational_graph.pdf}
+          \caption{Encrypted convolutional neural network example \autocite{repository}}
+          \label{fig:cnn}
         \end{figure}
       \end{column}
     \end{columns}
@@ -560,7 +600,7 @@
       \begin{column}{0.5\textwidth}
         There are relativeley few practical implementations that will work (support CKKS, serialisable, bootstrapping):
         \begin{itemize}
-            \item our own library (and soon to be docs): \url{https://github.com/DreamingRaven/python-reseal} 
+            \item our own library (and soon to be docs): \url{https://github.com/DreamingRaven/python-reseal}
         \end{itemize}
       \end{column}
     \end{columns}
@@ -576,7 +616,7 @@
           \item What is deep learning
           \item What is fully homomorphic encryption
           \item A rough idea of how it operates
-          \item How I got here
+          \item Taken through a CNN specific example
           \item How to find out more if it interests you
         \end{itemize}
       \end{column}
