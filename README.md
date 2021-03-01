@@ -22,4 +22,6 @@ The presentation pdf will be built inside the newly created "built" directory.
 
 ## Previously presented
 This presentation has been used in some form to present at:
+- Internet of Food Things Virtual Workshop: How Technology Can Facilitate Data Sharing In The Agri-Food Sector (2021-03-01)
+- University of Lincoln School of Computer Science: Research Seminars (2021-02-10)
 - New Scientist Live 2020 (2020-11-28)
